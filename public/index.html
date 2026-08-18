@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Valtrix V4.1</title>
+<link rel="stylesheet" href="style.css">
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<div id="auth">
+  <div class="card">
+    <h1>◆ Valtrix</h1>
+    <p>Entre ou crie sua conta</p>
+    <input id="user" placeholder="Usuário" autocomplete="username">
+    <input id="name" placeholder="Nome" autocomplete="name" hidden>
+    <input id="pass" type="password" placeholder="Senha" autocomplete="current-password">
+    <div class="tabs">
+      <button id="loginTab">Entrar</button>
+      <button id="regTab">Criar conta</button>
+    </div>
+    <button id="authBtn" class="primary full">Entrar</button>
+    <div id="err"></div>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <aside class="sidebar">
+    <h2>◆ Valtrix</h2>
+    <div id="me"></div>
+    <button id="newGroup" class="primary full">＋ Novo grupo</button>
+    <h4>MEUS GRUPOS</h4>
+    <div id="groups"></div>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <b id="title">Escolha um grupo</b>
+        <small id="status">offline</small>
+      </div>
+    </header>
+
+    <section id="messages"></section>
+
+    <form id="form">
+      <input id="text" placeholder="Digite uma mensagem..." disabled>
+      <button class="primary">Enviar</button>
+    </form>
+  </main>
+
+  <aside class="right">
+    <b>Participantes</b>
+    <div id="people"></div>
+  </aside>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
